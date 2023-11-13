@@ -29,10 +29,12 @@ const useTimer = (ini = 0) => {
   ;setTime(0)
     clearInterval(refInterval.current)
     active.current.disabled = false;
+    snapShot.current = []
     
   };
   const snap = () => {
     snapShot.current.push(time)
+
   }
 
   return { time, snapShot, startTimer, stopTimer, resetTimer,snap, active };
